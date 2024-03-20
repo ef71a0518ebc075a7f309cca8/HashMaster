@@ -41,8 +41,10 @@ def filegen(filename, fileopac):
         raise Exception()
     func = input("enter an algorithm: ")
     try:
-        with open(filename, "rb") as fileoper:
-            hashinstance = hashlib.file_digest(fileoper, func)
+        fileopen = open(filename, "rb")
+        fileread = fileopen.read()
+        hashinstance = hashlib.new(func)
+        hashinstance.update(fileread)
         if fileopac:
             fileop.write(hashinstance.hexdigest() + "  " + filename + "\n")
         return hashinstance.hexdigest()
@@ -69,11 +71,11 @@ while True:
             fileopactive = True
         except:
             try:
-                switch = input("this file already exists!\n append/overwrite: ")
-                if switch == "append":
+                switch = input("this file already exists!\n append(a)/overwrite(w): ")
+                if switch == "append" or "a":
                     fileop = open(filepos, "a")
                     fileopactive = True
-                if switch == "overwrite":
+                if switch == "overwrite" or "w":
                     fileop = open(filepos, "w")
                     fileopactive = True
                 else:
