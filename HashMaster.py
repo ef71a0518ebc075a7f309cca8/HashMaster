@@ -4,6 +4,19 @@ https://github.com/ef71a0518ebc075a7f309cca8
 ver 1.0
 '''
 import hashlib
+def guide():
+    print("made by ef71a0518ebc075a7f309cca8")
+    print("\n\nprompt = what is going to be hashed")
+    print("algorithm = hashing algorithm to be used")
+    print("only put algorithm name")
+    print("dont put any symbols or extra characters")
+    print("file output will save your hashes to a file")
+    print("you can select whether you are hashing a file")
+    print("or hashing text provided though the command line")
+    print("or a combination of both")
+    print("example: ")
+    print("enter a prompt: mypassword")
+    print("enter an algorithm: sha3_512\n\n")
 def hashgen(vari, fileopac):
     if vari == "Q":
         raise Exception()
@@ -48,14 +61,7 @@ while True:
     filehashperm = False
     filehashact = True
     if input("want a quick guide? y/n: ") == "y":
-        print("\n\nprompt = what is going to be hashed")
-        print("algorithm = hashing algorithm to be used")
-        print("only put algorithm name")
-        print("dont put any symbols or extra characters")
-        print("file operations will save your hashes to a file")
-        print("example: ")
-        print("enter a prompt: mypassword")
-        print("enter an algorithm: sha3_512\n\n")
+        guide()
     if input("do you want to output to a file? y/n:") == "y":
         filepos = input("enter the file path/name: ")
         try:
