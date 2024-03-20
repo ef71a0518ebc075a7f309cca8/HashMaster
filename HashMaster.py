@@ -5,8 +5,8 @@ ver 1.0
 '''
 import hashlib
 def guide():
-    print("made by ef71a0518ebc075a7f309cca8")
-    print("\n\nprompt = what is going to be hashed")
+    print("\n\nmade by ef71a0518ebc075a7f309cca8")
+    print("\nprompt = what is going to be hashed")
     print("algorithm = hashing algorithm to be used")
     print("only put algorithm name")
     print("dont put any symbols or extra characters")
