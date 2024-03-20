@@ -1,3 +1,4 @@
+# Cheese balls
 import hashlib
 def hashgen(vari, fileopac):
     if vari == "Q":
