@@ -43,9 +43,12 @@ def generate_file_hash(file_input_name, file_output_active):
     algorithm = input("enter an algorithm: ")
     try:
         file_input_object = open(file_input_name, "rb")
-        file_data = file_input_object.read()
         file_hash_operator = hash_library.new(algorithm)
-        file_hash_operator.update(file_data)
+        while True:
+            file_data = file_input_object.read((1024*1024))
+            if not file_data:
+                break
+            file_hash_operator.update(file_data)
         if file_output_active:
             file_output_object.write(file_hash_operator.hexdigest() + "  " + file_input_name + "\n")
         return file_hash_operator.hexdigest()
