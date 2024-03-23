@@ -1,7 +1,7 @@
 '''
 Made by ef71a0518ebc075a7f309cca8
 https://github.com/ef71a0518ebc075a7f309cca8
-ver 1.3
+ver 1.4
 '''
 import hashlib as hash_library
 import sys as system_integration
@@ -94,7 +94,7 @@ if len(system_integration.argv) > 1:
                 if argument_dictionary.get("app") != False:
                     file_output_object = open(str(argument_dictionary.get("out"), "a"))
                 else:
-                    print("file already exists! define append or overwrite to output\n")
+                    print("\nfile already exists! define append or overwrite to output\n")
                     raise Exception()
             if argument_dictionary.get("txt") != False:
                 print(generate_text_hash(str(argument_dictionary.get("txt")), str(argument_dictionary.get("alg")), True))
