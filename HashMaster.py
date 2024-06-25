@@ -1,6 +1,5 @@
 '''
 Made by ef71a0518ebc075a7f309cca8
-https://github.com/ef71a0518ebc075a7f309cca8
 ver 1.4
 '''
 import hashlib as hash_library
